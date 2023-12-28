@@ -1,4 +1,5 @@
-import React, {useState, ChangeEvent} from 'react'
+import React, {useState, ChangeEvent} from 'react';
+import {Input} from 'antd'
 
 function InputTask() {
   const [state, setState] = useState<string>('')
@@ -8,8 +9,8 @@ function InputTask() {
   return (
     <div>
           <h4>Input</h4>
-          <input onChange={handleValue}/>
-          <div>{state}</div>
+          <Input className='input' onChange={handleValue}/>
+          <div className='text'>{state}</div>
     </div>
   )
 }
