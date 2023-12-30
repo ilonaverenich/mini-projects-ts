@@ -11,7 +11,6 @@ function Array() {
   return (
     <div>
         <p>Array</p>
-
     </div>
   )
 }
