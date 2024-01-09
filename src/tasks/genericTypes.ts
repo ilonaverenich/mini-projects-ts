@@ -35,9 +35,33 @@ const arrayNumbers: ArrayOfType<number[]> = [
 ]
 
 //5. Типизируй заданные объекты с использованием дженериков: 
+interface Item<TInfo, TFeatures> {
+    info: TInfo,
+    features: TFeatures
+}
 
-const house = {
-    info:{
+interface Info {
+    address: string,
+    city: string
+}
+
+interface FeaturesHouse {
+    bedrooms: number,
+    bathrooms: number,
+    areaSquareFeet: number,
+    hasGarden: boolean
+}
+
+interface FeaturesComputer {
+    processor: string,
+    memoryGB: number,
+    storageGB: number,
+    hasGraphicsCard: boolean
+}
+
+// Пример использования для дома
+const house: Item<Info, FeaturesHouse> = {
+    info: {
         address: '123 Main Street',
         city: 'Exampleville',
     },
@@ -49,7 +73,8 @@ const house = {
     },
 };
 
-const computer = {
+// Пример использования для компьютера
+const computer: Item<Info, FeaturesComputer> = {
     info: {
         address: 'N/A',
         city: 'Techtopia',
@@ -62,10 +87,22 @@ const computer = {
     },
 };
 
-const table = {
+// Пример использования для стола (без конкретных характеристик)
+const table: Item<Info, {}> = {
     info: {
         address: 'house',
         city: 'house',
     },
-    features: {}
+    features: {},
 };
+
+//6. 
+type TypeFactory<T> =T;
+type XType = TypeFactory<string> 
+type XType2 = TypeFactory<number> 
+type XType3 = TypeFactory<boolean> 
+
+function toArray<T> (...arg:T[]):T[]{
+	return arg
+}
+toArray(1,2,3,4)
