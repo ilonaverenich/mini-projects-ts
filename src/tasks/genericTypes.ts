@@ -106,3 +106,19 @@ function toArray<T> (...arg:T[]):T[]{
 	return arg
 }
 toArray(1,2,3,4)
+
+type PaymentInfo<T> = {
+    id: string;
+    amount: number;
+    currency: T;
+}
+const paymentInfo:PaymentInfo<number> = {
+	id: 'string',
+    amount: 12000,
+    currency: 15
+}
+
+function indx<T>(arg:T):T{
+	return arg
+}
+indx<string>('ss')
