@@ -4,6 +4,7 @@ import './App.css';
 import Counter from './tasks/Counter';
 import InputTask from './tasks/InputTask';
 import Test from './tasks/Test';
+import Main from './tasks/Main';
 
 const App: React.FC= ()=> {
 
@@ -25,7 +26,9 @@ const App: React.FC= ()=> {
     <div className="App">
       <Counter/>
       <InputTask/>
-      <Test name='Ilona' age={28} infoCar={infoCar} users={users}/>
+      {/* <Test name='Ilona' age={28} infoCar={infoCar} users={users}/> */}
+
+      <Main/> 
   
     </div>
   );

@@ -4,7 +4,8 @@ interface Props {
     name:string,
     age:number,
     infoCar: InfoCar,
-    users:Users[]
+    users:Users[],
+ 
   }
   interface InfoCar{
     model: string,
@@ -17,7 +18,7 @@ interface Props {
     age: number
   }
 
-const Test: React.FC<Props> =({name,age, infoCar, users}) =>{
+const Test: React.FC<Props> =({name,age, infoCar, users }) =>{
   return (
     <div> 
         TEST PROPS
@@ -28,6 +29,7 @@ const Test: React.FC<Props> =({name,age, infoCar, users}) =>{
         <div>{users.map(user=><div>
             <p>{user.name} {user.surname} - {user.age}</p>
         </div>)}</div>
+
     </div>
   )
 }
