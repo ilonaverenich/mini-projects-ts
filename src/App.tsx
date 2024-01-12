@@ -5,6 +5,7 @@ import Counter from './tasks/Counter';
 import InputTask from './tasks/InputTask';
 import Test from './tasks/Test';
 import Main from './tasks/Main';
+import StateTsComponent from './tasks/StateTsComponent';
 
 const App: React.FC= ()=> {
 
@@ -24,11 +25,11 @@ const App: React.FC= ()=> {
   }]
   return (
     <div className="App">
-      <Counter/>
-      <InputTask/>
-      {/* <Test name='Ilona' age={28} infoCar={infoCar} users={users}/> */}
-
-      <Main/> 
+    {/*  <Counter/> */}
+    {/* <InputTask/> */}
+    {/* <Test name='Ilona' age={28} infoCar={infoCar} users={users}/> */}
+    {/* <Main/>  */}
+    <StateTsComponent/>
   
     </div>
   );
